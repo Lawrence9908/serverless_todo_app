@@ -74,7 +74,7 @@ export class TodosAccess{
         return item as TodoItem;
         }
         
-        async updateAttachmentUrl(todoId:string, userId: string): Promise<TodoItem>{
+        async updateAttachmentUrl(todoId:string, userId:string): Promise<TodoItem>{
             logger.info('Updating attachment url')
             
             const attachmentUrl:string =  `https://${this.s3Bucket}.s3.amazonaws.com/${todoId}`
