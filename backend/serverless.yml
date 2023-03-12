@@ -119,7 +119,7 @@ resources:
       Type: AWS::ApiGateway::GatewayResponse
       Properties:
     
-    # TODO: Create a DynamoDB table with local secondary index and a composite key
+    #Create a DynamoDB table with local secondary index and a composite key
     TodosTable:
       Type: AWS::DynamoDB::Table
       Properties:

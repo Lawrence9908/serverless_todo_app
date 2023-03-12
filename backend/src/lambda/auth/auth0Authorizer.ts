@@ -53,8 +53,8 @@ export const handler = async (event: CustomAuthorizerEvent): Promise<CustomAutho
 }
 
 async function verifyToken(authHeader: string): Promise<JwtPayload> {
-  logger.info("Verify token");
-  const token  = getToken(authHeader.substring(0, 20));
+  logger.info("Verify token", authHeader.substring(0, 20));
+  const token  = getToken(authHeader);
   // const token = getToken(authHeader)
   const jwt: Jwt = decode(token, { complete: true }) as Jwt
 
